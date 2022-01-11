@@ -23,7 +23,7 @@ import java.io.IOException;
 import java.time.Instant;
 import java.util.List;
 
-class ImageProcessor {
+class ImageProcessor2 {
 
     private static final String bwFolder = "bw-images/";
     private static final String brightenFolder = "brighten-images/";
