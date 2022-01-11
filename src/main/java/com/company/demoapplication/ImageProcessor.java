@@ -1,5 +1,4 @@
-t
-/
+/*
  * Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
  * SPDX-License-Identifier: MIT-0
  */
@@ -54,7 +53,7 @@ class ImageProcessor {
                 File outputFile = File.createTempFile(Instant.now().toString() + imageName, null);
                 IOUtils.copy(Main.s3Client().getObject(Main.bucketName+"test", imageKey).getObjectContent(), new FileOutputStream(outputFile, false));
 
-		IOUtils.copy(Main.s3Client().getObject(Main.bucketName, imageKey).getObjectContent(), new FileOutputStream(outputFile, false));
+		        IOUtils.copy(Main.s3Client().getObject(Main.bucketName, imageKey).getObjectContent(), new FileOutputStream(outputFile, false));
 
                 bwip.monochromeAndUpload(outputFile, imageName);
                 bip.brightenAndUpload(outputFile, imageName);
